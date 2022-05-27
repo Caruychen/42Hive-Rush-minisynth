@@ -30,11 +30,11 @@ impl Track {
         };
 
 	    let track = Track {
-		sink: Sink::try_new(&stream_handle).unwrap(),
-		oscillator: oscillator,
-		notes: Vec::new(),
-		octave: 4,
-		duration: 1.0
+            sink: Sink::try_new(&stream_handle).unwrap(),
+            oscillator: oscillator,
+            notes: Vec::new(),
+            octave: 4,
+            duration: 1.0
 	    };
 	    track.sink.pause();
 	    track
