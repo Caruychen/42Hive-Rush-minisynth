@@ -30,5 +30,19 @@ The `<notes>` part of each line is parsed for all substrings matching the follow
 More details about the notes format can be found in the attached [pdf](rushes-sound-synthesis.en.pdf) in this repository.
 
 ### The Audio synthesizer
-Our `minisynth` tool generates 4 basic 
+Each **track** generates notes according to the instrument assigned, as indicated by the **tracks** line in the document. Our tool supports the following wave form generation:
+• sine waves
+• saw waves
+• square waves
+• triangle waves
+The possible values for `<instrument>` are therefore **sine, saw, square and triangle**. We use the standard modern tuning of A4 playing at 440 Hz.
+
+### The Tech
+We used Rust for this project, a fascinatingly cool language that's been getting a lot of attention lately. This was my first real foray into programming with Rust, motivated by my curiousity about this language. It's fast and safe, two words not often put together for a single language.
+
+It deals with a lot of the memory safety problems that you have in `C`, which leaves all the memory management up to the coder. Yet it's faster than languages that are memory safe like `python` or `ruby` (those are still great languages. This is because it doesn't use garbage collectors, which are slow run time programs that manage memory for you. Instead, Rust introduces the concept of `ownership`, which is a set of rules that the compile checks. If any rules are violated, the program won't compile. This means memory management happens at compile time. So with the expense of more expensive compile time, the language is fast and safe at run time.
+
+Rust also gives a wonderful developer experience. Since the rules are so complex and elaborate, a lot of effort has been put into making VERY helpful compiler errors. It's almost like having a pair programmer, showing you where your mistakes are. I haven't worked with Rust much, but I'm already beginning to love it.
+
+Finally, for the audio synthesis, we use the `rodio` library, which is a basic audio playback library that allows use to create the necessary audio samples, and access the output device. We also got a lot of help from this [Article](https://thewolfsound.com/sound-synthesis/wavetable-synth-in-rust/) by Jan Wilczek, that helped us create a basic Wave table (I would have preferred to refer to them as arrays, but table is fine too). This formed the basic building block for our synthesizer tool.
 
