@@ -12,6 +12,8 @@ ___\|/___'-|_____|___|__|____|_______|____|__|__|__|________|__|_____________||
 
 This project was developed with Rust for the Hive Sound Synthesis Rush Project.
 
+A Rush project at Hive Helsinki, is a spontaneous 2 day project designed to take us way out of our comfort zone, and try something new. More or less like a Hackathon 🤘 
+
 ## What is it?
 Our objective was to basically develop a minimal audio synthesizer tool, called `minisynth`. A Command line tool that will parse a specific music description file format, and produce synthesized audio from it. 
 
