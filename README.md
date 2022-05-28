@@ -23,7 +23,7 @@ If you want to try out this synthesizer, once you cloned this repository, the ex
 
 We hope you have as much fun as we did!
 
-### The Music Description Format
+## The Music Description Format
 The `minisynth` tool accepts the following file format (The file may be named with a `.synth` suffix, but really, any file naming works fine too):
 * The file is text based
 * Any empty line or line starting with a # character is ignored as comment
@@ -31,7 +31,7 @@ The `minisynth` tool accepts the following file format (The file may be named wi
 * The next non-comment line must be tracks followed by a comma separated list of instruments: `tracks <instrument>[,<instrument>,...]`. Each entry in this list represent a track, numbered from 1 to the total number of tracks. 
 * All remaining non-comment lines must be in the following format: `<track>:<notes>`, where `<track>` is the track number, and `<notes>` represents notes to be added to the given track.
 
-### The Notes Format
+## The Notes Format
 The `<notes>` part of each line is parsed for all substrings matching the following pattern: `<pitch>[<alteration>][<octave>][/<duration>]`.
 * `<pitch>` is any lowercase letter from **a** to **g**, representing the usual pitch names in Western notation, or the letter **r** to represent a rest (silence)
 * `<alteration>` is optional, and can either be **#** or **b**, indicating that the note should be sharp or flat (note that these are the hash symbol and the lowercase letter B, representable in ASCII, not the sharp and flat musical symbols available in Unicode)
@@ -40,7 +40,7 @@ The `<notes>` part of each line is parsed for all substrings matching the follow
 
 More details about the notes format can be found in the attached [pdf](rushes-sound-synthesis.en.pdf) in this repository.
 
-### The Audio synthesizer
+## The Audio synthesizer
 Each **track** generates notes according to the instrument assigned, as indicated by the **tracks** line in the document. Our tool supports the following wave form generation:
 • sine waves
 • saw waves
@@ -48,7 +48,7 @@ Each **track** generates notes according to the instrument assigned, as indicate
 • triangle waves
 The possible values for `<instrument>` are therefore **sine, saw, square and triangle**. We use the standard modern tuning of A4 playing at 440 Hz.
 
-### The Tech
+## The Tech
 We used Rust for this project, a fascinatingly cool language that's been getting a lot of attention lately. This was my first real foray into programming with Rust, motivated by my curiousity about this language. It's fast and safe, two words not often put together for a single language.
 
 It deals with a lot of the memory safety problems that you have in `C`, which leaves all the memory management up to the coder. Yet it's faster than languages that are memory safe like `python` or `ruby` (those are still great languages. This is because it doesn't use garbage collectors, which are slow run time programs that manage memory for you. Instead, Rust introduces the concept of `ownership`, which is a set of rules that the compile checks. If any rules are violated, the program won't compile. This means memory management happens at compile time. So with the expense of more expensive compile time, the language is fast and safe at run time.
