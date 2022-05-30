@@ -23,7 +23,9 @@ If you want to try out this synthesizer, once you cloned this repository, the ex
 ./minisynth file
 ```
  
-Note that the sound may or may not be distored for some songs depending on your speaker device. The synthesizer does not dynamically mix the different audio tracks, but plays simultaneous streams for each instrument. We hope you have as much fun as we did making this!
+Note that the sound may or may not be distored for some songs depending on your speaker device. The synthesizer does not dynamically mix the different audio tracks, but plays simultaneous streams for each instrument.
+
+We hope you have as much fun as we did making this!
 
 ## The Music Description Format
 The `minisynth` tool accepts the following file format (The file may be named with a `.synth` suffix, but really, any file naming works fine too):
