@@ -50,6 +50,7 @@ Each **track** generates notes according to the instrument assigned, as indicate
 * saw waves
 * square waves
 * triangle waves
+
 The possible values for `<instrument>` are therefore **sine, saw, square and triangle**. We use the standard modern tuning of A4 playing at 440 Hz.
 
 ## The Tech
