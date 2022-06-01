@@ -23,7 +23,7 @@ If you want to try out this synthesizer, once you cloned this repository, the ex
 ./minisynth file
 ```
  
-Note that the sound may or may not be distored for some songs depending on your speaker device. The synthesizer does not dynamically mix the different audio tracks, but plays simultaneous streams for each instrument. As such, for songs with multiple instruments, the track amplitute stacks so that you might hear some overdriving going on.
+Note that the sound may or may not be distored for some songs depending on your speaker device. The synthesizer does not dynamically mix the different audio tracks, but plays simultaneous streams for each instrument. As such, for songs with multiple instruments, the track amplitute stacks so that you might hear some overdriving going on. This synthesizer was made on a Mac, with Mac speakers.
 
 We hope you have as much fun as we did making this!
 
