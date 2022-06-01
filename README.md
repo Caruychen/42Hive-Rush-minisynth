@@ -46,10 +46,10 @@ More details about the notes format can be found in the attached [pdf](rushes-so
 
 ## The Audio synthesizer
 Each **track** generates notes according to the instrument assigned, as indicated by the **tracks** line in the document. Our tool supports the following wave form generation:
-• sine waves
-• saw waves
-• square waves
-• triangle waves
+* sine waves
+* saw waves
+* square waves
+* triangle waves
 The possible values for `<instrument>` are therefore **sine, saw, square and triangle**. We use the standard modern tuning of A4 playing at 440 Hz.
 
 ## The Tech
