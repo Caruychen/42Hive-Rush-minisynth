@@ -23,7 +23,7 @@ If you want to try out this synthesizer, once you cloned this repository, the ex
 ./minisynth file
 ```
  
-Note that the sound may or may not be distored for some songs depending on your speaker device. The synthesizer does not dynamically mix the different audio tracks, but plays simultaneous streams for each instrument.
+Note that the sound may or may not be distored for some songs depending on your speaker device. The synthesizer does not dynamically mix the different audio tracks, but plays simultaneous streams for each instrument. As such, for songs with multiple instruments, the track amplitute stacks so that you might hear some overdriving going on.
 
 We hope you have as much fun as we did making this!
 
@@ -62,3 +62,5 @@ Rust also gives a wonderful developer experience. Since the rules are so complex
 
 Finally, for the audio synthesis, we use the `rodio` library, which is a basic audio playback library that allows use to create the necessary audio samples, and access the output device. We also got a lot of help from this [Article](https://thewolfsound.com/sound-synthesis/wavetable-synth-in-rust/) by Jan Wilczek, that helped us create a basic Wave table (I would have preferred to refer to them as arrays, but table is fine too). This formed the basic building block for our synthesizer tool.
 
+## Future improvements
+Since we had just 2 days for this, there is so much more that we would love to work and improve on. Such as cleaning up the code to have more logical structures. You may also hear some "cracking" going on, due to the face that we did not yet implement any (enveloping)[https://en.wikipedia.org/wiki/Envelope_(music)]
